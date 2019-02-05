@@ -42,7 +42,7 @@ def train_network(training_data, labels, output, keep_prob=tf.placeholder(tf.flo
     print("End")
 
     # Evaluate on the test set
-    test_accuracy = accuracy.eval(feed_dict={training_data: mnist.test.images, labels: mnist.test.labels, keep_prob: 0.5})
+    test_accuracy = accuracy.eval(feed_dict={training_data: mnist.test.images, labels: mnist.test.labels, keep_prob: 1.0})
     print("Test accuracy: %g %%"%(test_accuracy*100))
 
 # Define placeholders
